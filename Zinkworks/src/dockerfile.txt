@@ -1,0 +1,6 @@
+#base image
+FROM openjdk:8
+COPY . /Users/mcdai/IdeaProjects/Zinkworks/src
+WORKDIR /Users/mcdai/IdeaProjects/Zinkworks/src
+RUN ["javac", "ATMtask.java"]
+ENTRYPOINT ["src", "ATMtask"]
